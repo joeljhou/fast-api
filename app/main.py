@@ -21,7 +21,7 @@ def cobo_sign(req: CoboSignReq):
         req.body_str,
         req.api_secret_hex,
     )
-    return {"signature": signature_hex}
+    return {"signature_hex": signature_hex}
 
 
 if __name__ == "__main__":
