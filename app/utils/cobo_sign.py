@@ -56,7 +56,7 @@ def main():
     timestamp_ms = str(int(time.time() * 1000))
 
     # 计算签名
-    signature_hex = calculate_signature(method, path, "1762406260006", params_str, body_str, API_SECRET)
+    signature_hex = calculate_signature(method, path, timestamp_ms, params_str, body_str, API_SECRET)
 
     # 构造请求
     url = f"{host}{path}?{params_str}"
